@@ -1,0 +1,147 @@
+
+package DAO;
+
+
+import java.util.Date;
+
+public class clientes {
+    private int idCli;              // ID_CLI
+    private String nomeCli;         // NOME_CLI
+    private String endeCli;         // ENDE_CLI
+    private String numeCli;         // NUME_CLI
+    private String complCli;        // COMPL_CLI
+    private String bairCli;         // BAIR_CLI
+    private String cidaCli;         // CIDA_CLI
+    private String ufCli;           // UF_CLI
+    private String cepCli;          // CEP_CLI
+    private String foneCli;         // FONE_CLI
+    private String cpfCli;          // CPF_CLI
+    private Date dataNasc;          // DATA_NASC
+    private String cnpjCli;         // CNPJ_CLI
+
+    // Construtor
+    public clientes(int idCli, String nomeCli, String endeCli, String numeCli, 
+                   String complCli, String bairCli, String cidaCli, 
+                   String ufCli, String cepCli, String foneCli, 
+                   String cpfCli, Date dataNasc, String cnpjCli) {
+        this.idCli = idCli;
+        this.nomeCli = nomeCli;
+        this.endeCli = endeCli;
+        this.numeCli = numeCli;
+        this.complCli = complCli;
+        this.bairCli = bairCli;
+        this.cidaCli = cidaCli;
+        this.ufCli = ufCli;
+        this.cepCli = cepCli;
+        this.foneCli = foneCli;
+        this.cpfCli = cpfCli;
+        this.dataNasc = dataNasc;
+        this.cnpjCli = cnpjCli;
+    }
+
+    // Getters e Setters
+    public int getIdCli() {
+        return idCli;
+    }
+
+    public void setIdCli(int idCli) {
+        this.idCli = idCli;
+    }
+
+    public String getNomeCli() {
+        return nomeCli;
+    }
+
+    public void setNomeCli(String nomeCli) {
+        this.nomeCli = nomeCli;
+    }
+
+    public String getEndeCli() {
+        return endeCli;
+    }
+
+    public void setEndeCli(String endeCli) {
+        this.endeCli = endeCli;
+    }
+
+    public String getNumeCli() {
+        return numeCli;
+    }
+
+    public void setNumeCli(String numeCli) {
+        this.numeCli = numeCli;
+    }
+
+    public String getComplCli() {
+        return complCli;
+    }
+
+    public void setComplCli(String complCli) {
+        this.complCli = complCli;
+    }
+
+    public String getBairCli() {
+        return bairCli;
+    }
+
+    public void setBairCli(String bairCli) {
+        this.bairCli = bairCli;
+    }
+
+    public String getCidaCli() {
+        return cidaCli;
+    }
+
+    public void setCidaCli(String cidaCli) {
+        this.cidaCli = cidaCli;
+    }
+
+    public String getUfCli() {
+        return ufCli;
+    }
+
+    public void setUfCli(String ufCli) {
+        this.ufCli = ufCli;
+    }
+
+    public String getCepCli() {
+        return cepCli;
+    }
+
+    public void setCepCli(String cepCli) {
+        this.cepCli = cepCli;
+    }
+
+    public String getFoneCli() {
+        return foneCli;
+    }
+
+    public void setFoneCli(String foneCli) {
+        this.foneCli = foneCli;
+    }
+
+    public String getCpfCli() {
+        return cpfCli;
+    }
+
+    public void setCpfCli(String cpfCli) {
+        this.cpfCli = cpfCli;
+    }
+
+    public Date getDataNasc() {
+        return dataNasc;
+    }
+
+    public void setDataNasc(Date dataNasc) {
+        this.dataNasc = dataNasc;
+    }
+
+    public String getCnpjCli() {
+        return cnpjCli;
+    }
+
+    public void setCnpjCli(String cnpjCli) {
+        this.cnpjCli = cnpjCli;
+    }
+}
+    
