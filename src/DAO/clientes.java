@@ -16,14 +16,14 @@ public class clientes {
     private String cepCli;          // CEP_CLI
     private String foneCli;         // FONE_CLI
     private String cpfCli;          // CPF_CLI
-    private Date dataNasc;          // DATA_NASC
+    private String dataNasc;          // DATA_NASC
     private String cnpjCli;         // CNPJ_CLI
 
     // Construtor
     public clientes(int idCli, String nomeCli, String endeCli, String numeCli, 
                    String complCli, String bairCli, String cidaCli, 
                    String ufCli, String cepCli, String foneCli, 
-                   String cpfCli, Date dataNasc, String cnpjCli) {
+                   String cpfCli, String dataNasc, String cnpjCli) {
         this.idCli = idCli;
         this.nomeCli = nomeCli;
         this.endeCli = endeCli;
@@ -128,11 +128,11 @@ public class clientes {
         this.cpfCli = cpfCli;
     }
 
-    public Date getDataNasc() {
+    public String getDataNasc() {
         return dataNasc;
     }
 
-    public void setDataNasc(Date dataNasc) {
+    public void setDataNasc(String dataNasc) {
         this.dataNasc = dataNasc;
     }
 
@@ -142,6 +142,9 @@ public class clientes {
 
     public void setCnpjCli(String cnpjCli) {
         this.cnpjCli = cnpjCli;
+    }
+    
+    public clientes(){
     }
 }
     
