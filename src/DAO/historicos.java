@@ -3,30 +3,43 @@ package DAO;
 
 
 public class historicos {
-    private int idHis;          // ID_HIS
-    private String desHis;      // DES_HIS
+    private String idHis;          // ID_HIS
+    private String descricao;      // DES_HIS
 
     // Construtor
-    public historicos(int idHis, String desHis) {
+    public historicos(String idHis, String descricao) {
         this.idHis = idHis;
-        this.desHis = desHis;
+        this.descricao = descricao;
     }
 
     // Getters e Setters
-    public int getIdHis() {
+    public String getIdHis() {
         return idHis;
     }
 
-    public void setIdHis(int idHis) {
+    public void setIdHis(String idHis) {
         this.idHis = idHis;
     }
 
-    public String getDesHis() {
-        return desHis;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDesHis(String desHis) {
-        this.desHis = desHis;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
+    
+    public historicos(){
+        
+    }
+    
+    public String dadosSQLInsert(){
+        String historico;
+        historico = "'"
+        + this.getIdHis() + "','"
+        + this.getDescricao() + "'";
+        
+        return historico;
+    }    
 }
 

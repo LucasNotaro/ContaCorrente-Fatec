@@ -5,11 +5,11 @@ package DAO;
 public class usuarios {
     private String id;        // ID
     private String senha;     // SENHA
-    private int numAge;       // NUM_AGE
-    private long numCc;       // NUM_CC
+    private String numAge;       // NUM_AGE
+    private String numCc;       // NUM_CC
 
     // Construtor
-    public usuarios(String id, String senha, int numAge, long numCc) {
+    public usuarios(String id, String senha, String numAge, String numCc) {
         this.id = id;
         this.senha = senha;
         this.numAge = numAge;
@@ -33,20 +33,35 @@ public class usuarios {
         this.senha = senha;
     }
 
-    public int getNumAge() {
+    public String getNumAge() {
         return numAge;
     }
 
-    public void setNumAge(int numAge) {
+    public void setNumAge(String numAge) {
         this.numAge = numAge;
     }
 
-    public long getNumCc() {
+    public String getNumCc() {
         return numCc;
     }
 
-    public void setNumCc(long numCc) {
+    public void setNumCc(String numCc) {
         this.numCc = numCc;
+    }
+    
+    public usuarios(){
+        
+    }
+    
+    public String dadosSQLInsert(){
+        String dadosUsuarios;
+        dadosUsuarios = "'"
+        + this.getId() + "','"
+        + this.getSenha() + "','"
+        + this.getNumAge() + "','"
+        + this.getNumCc() + "'";
+        
+        return dadosUsuarios;
     }
 }
 

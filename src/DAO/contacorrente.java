@@ -3,13 +3,13 @@ package DAO;
 
 
 public class contacorrente {
-    private int numAge;      // NUM_AGE
-    private long numCc;      // NUM_CC
-    private int idCli;       // ID_CLI
-    private double saldo;     // SALDO
+    private String numAge;      // NUM_AGE
+    private String numCc;      // NUM_CC
+    private String idCli;       // ID_CLI
+    private String saldo;     // SALDO
 
     // Construtor
-    public contacorrente(int numAge, long numCc, int idCli, double saldo) {
+    public contacorrente(String numAge, String numCc, String idCli, String saldo) {
         this.numAge = numAge;
         this.numCc = numCc;
         this.idCli = idCli;
@@ -17,36 +17,51 @@ public class contacorrente {
     }
 
     // Getters e Setters
-    public int getNumAge() {
+    public String getNumAge() {
         return numAge;
     }
 
-    public void setNumAge(int numAge) {
+    public void setNumAge(String numAge) {
         this.numAge = numAge;
     }
 
-    public long getNumCc() {
+    public String getNumCc() {
         return numCc;
     }
 
-    public void setNumCc(long numCc) {
+    public void setNumCc(String numCc) {
         this.numCc = numCc;
     }
 
-    public int getIdCli() {
+    public String getIdCli() {
         return idCli;
     }
 
-    public void setIdCli(int idCli) {
+    public void setIdCli(String idCli) {
         this.idCli = idCli;
     }
 
-    public double getSaldo() {
+    public String getSaldo() {
         return saldo;
     }
 
-    public void setSaldo(double saldo) {
+    public void setSaldo(String saldo) {
         this.saldo = saldo;
+    }
+    
+    public contacorrente(){
+        
+    }
+    
+    public String dadosSQLInsert(){
+        String dadosCc;
+        dadosCc = "'"
+        + this.getNumAge() + "','"
+        + this.getNumCc() + "','"
+        + this.getIdCli() + "','"
+        + this.getSaldo() + "'";
+        
+        return dadosCc;
     }
 }
 

@@ -5,20 +5,20 @@ package DAO;
 import java.util.Date;
 
 public class movimentacao {
-    private int numAge;                   // NUM_AGE
-    private long numCc;                   // NUM_CC
-    private Date dataMov;                 // DATA_MOV
+    private String numAge;                   // NUM_AGE
+    private String numCc;                   // NUM_CC
+    private String dataMov;                 // DATA_MOV
     private String numDocto;              // NUM_DOCTO
-    private char debitoCredito;            // DEBITO_CREDITO
-    private int idHis;                    // ID_HIS
+    private String debitoCredito;            // DEBITO_CREDITO
+    private String idHis;                    // ID_HIS
     private String complHis;               // COMPL_HIS
-    private double valor;                  // VALOR
-    private double saldo;                  // SALDO
+    private String valor;                  // VALOR
+    private String saldo;                  // SALDO
 
     // Construtor
-    public movimentacao(int numAge, long numCc, Date dataMov, String numDocto, 
-                        char debitoCredito, int idHis, String complHis, 
-                        double valor, double saldo) {
+    public movimentacao(String numAge, String numCc, String dataMov, String numDocto, 
+                        String debitoCredito, String idHis, String complHis, 
+                        String valor, String saldo) {
         this.numAge = numAge;
         this.numCc = numCc;
         this.dataMov = dataMov;
@@ -31,27 +31,27 @@ public class movimentacao {
     }
 
     // Getters e Setters
-    public int getNumAge() {
+    public String getNumAge() {
         return numAge;
     }
 
-    public void setNumAge(int numAge) {
+    public void setNumAge(String numAge) {
         this.numAge = numAge;
     }
 
-    public long getNumCc() {
+    public String getNumCc() {
         return numCc;
     }
 
-    public void setNumCc(long numCc) {
+    public void setNumCc(String numCc) {
         this.numCc = numCc;
     }
 
-    public Date getDataMov() {
+    public String getDataMov() {
         return dataMov;
     }
 
-    public void setDataMov(Date dataMov) {
+    public void setDataMov(String dataMov) {
         this.dataMov = dataMov;
     }
 
@@ -63,19 +63,19 @@ public class movimentacao {
         this.numDocto = numDocto;
     }
 
-    public char getDebitoCredito() {
+    public String getDebitoCredito() {
         return debitoCredito;
     }
 
-    public void setDebitoCredito(char debitoCredito) {
+    public void setDebitoCredito(String debitoCredito) {
         this.debitoCredito = debitoCredito;
     }
 
-    public int getIdHis() {
+    public String getIdHis() {
         return idHis;
     }
 
-    public void setIdHis(int idHis) {
+    public void setIdHis(String idHis) {
         this.idHis = idHis;
     }
 
@@ -87,20 +87,41 @@ public class movimentacao {
         this.complHis = complHis;
     }
 
-    public double getValor() {
+    public String getValor() {
         return valor;
     }
 
-    public void setValor(double valor) {
+    public void setValor(String valor) {
         this.valor = valor;
     }
 
-    public double getSaldo() {
+    public String getSaldo() {
         return saldo;
     }
 
-    public void setSaldo(double saldo) {
+    public void setSaldo(String saldo) {
         this.saldo = saldo;
+    }
+    
+    public movimentacao(){
+        
+    }
+    
+    public String dadosSQLInsert(){
+        String dadosMov;
+        dadosMov = "'"
+        + this.getNumAge() + "','"
+        + this.getNumCc() + "','"
+        + this.getDataMov() + "','"
+        + this.getNumDocto() + "','"
+        + this.getDebitoCredito() + "','"
+        + this.getIdHis() + "','"
+        + this.getComplHis() + "','"
+        + this.getValor() + "','"
+        + this.getSaldo() + "'";
+        
+        
+        return dadosMov;
     }
 }
 

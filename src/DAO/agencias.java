@@ -107,4 +107,27 @@ public class agencias {
     public void setFoneAge(String foneAge) {
         this.foneAge = foneAge;
     }
+    
+    public agencias(){
+        
+    }
+    public String dadosSQLInsert(){
+        String dadosAgencia;
+        dadosAgencia = "'"
+        + this.getNumAge() + "','"
+        + this.getNomeAge() + "','"
+        + this.getEndeAge() + "','"
+        + this.getNumeAge() + "','"
+        + this.getComplAge() + "','"
+        + this.getBairAge() + "','"
+        + this.getCidaAge() + "','"
+        + this.getUfAge() + "','"
+        + this.getCepAge() + "','"
+        + this.getFoneAge() + "'";
+        
+        
+        return dadosAgencia;
+    }
+    
+    
 }
