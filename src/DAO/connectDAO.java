@@ -37,6 +37,8 @@ public class connectDAO {
     }
     
     public void insereRegistroJFBD(String tabela, String strDados){
+        
+        /*
         String caminho = "jdbc:sqlserver://localhost:1433;databaseName=MOV_CONTA_CORRENTE;encrypt=true;trustServerCertificate=true;"; 
         String usuario = "sa";
         String senha = ".";
@@ -48,6 +50,9 @@ public class connectDAO {
             JOptionPane.showMessageDialog(null, "\n Erro de conexão, connectDAO - Estado => "+erro.getSQLState());
             JOptionPane.showMessageDialog(null, "\n Erro de conexão, connectDAO - Código => "+erro.getErrorCode());
         }     
+        
+        */
+        con = connectDB();        
         Statement stmt;
     try {
     stmt = con.createStatement();
