@@ -111,7 +111,7 @@ public class agencias {
     public agencias(){
         
     }
-    public String dadosSQLInsert(){
+    public String dadosSQLValues(){
         String dadosAgencia;
         dadosAgencia = "'"
         + this.getNumAge() + "','"

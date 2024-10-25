@@ -107,7 +107,7 @@ public class movimentacao {
         
     }
     
-    public String dadosSQLInsert(){
+    public String dadosSQLValues(){
         String dadosMov;
         dadosMov = "'"
         + this.getNumAge() + "','"

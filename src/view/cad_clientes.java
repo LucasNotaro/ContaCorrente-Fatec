@@ -20,11 +20,12 @@ public class Cad_Clientes extends javax.swing.JFrame {
         initComponents();
     }
     String operacaoAtivaGlobal = "Nenhum";   // Variável criada para utilização em toda a classe
-    public Cad_Clientes(String operacaoAtiva){
+
+    public Cad_Clientes(String operacaoAtiva) {
         initComponents();                                    // Inicializa todos os componentes que estão colocados na tela Text, Labels, Buttons, etc.
         operacaoAtivaGlobal = operacaoAtiva;  // Setar a operacaoAtivaGlobal com o parâmetro recebido para utilização em toda a classe
         String operacao = "Cadastrar";                    // String para verificar qual é operação que será configurada
-        if (operacaoAtiva.equals(operacao)){
+        if (operacaoAtiva.equals(operacao)) {
             jLabel1.setVisible(true);                      // Para inclusão serão liberados todos os componentes da tela como true para ficarem visíveis
             jLabel2.setVisible(true);
             jLabel3.setVisible(true);
@@ -50,7 +51,7 @@ public class Cad_Clientes extends javax.swing.JFrame {
             jButton1.setText("Incluir");
         }
         operacao = "Alterar";                               // defini a operação como Alterar os dados de um registro
-        if (operacaoAtiva.equals(operacao)){       // para alteração deverá ser setado todos os componentes como false para não visualizar
+        if (operacaoAtiva.equals(operacao)) {       // para alteração deverá ser setado todos os componentes como false para não visualizar
             jLabel1.setVisible(true);                       // deixando somente o label e o TextField do Id para pesquisar como true (visível).
             jLabel2.setVisible(false);
             jLabel3.setVisible(false);
@@ -78,9 +79,9 @@ public class Cad_Clientes extends javax.swing.JFrame {
             jTextField12.setVisible(false);
             jTextField13.setVisible(false);
             jButton1.setText("Alterar");
-        }        
+        }
         operacao = "Excluir";                                // defini a operação como Excluir um registro
-        if (operacaoAtiva.equals(operacao)){       // para exclusão deverá ser setado todos os componentes como false para não visualizar
+        if (operacaoAtiva.equals(operacao)) {       // para exclusão deverá ser setado todos os componentes como false para não visualizar
             jLabel1.setVisible(true);                       // deixando somente o label e o TextField do Id para pesquisar como true (visível).
             jLabel2.setVisible(false);
             jLabel3.setVisible(false);
@@ -108,9 +109,9 @@ public class Cad_Clientes extends javax.swing.JFrame {
             jTextField12.setVisible(false);
             jTextField13.setVisible(false);
             jButton1.setText("Excluir");
-        }        
+        }
 
-   }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -298,42 +299,45 @@ public class Cad_Clientes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       clientes dados_cliente = new clientes();
-        
-        dados_cliente.setIdCli(Integer.parseInt(jTextField1.getText()));
-        dados_cliente.setNomeCli(jTextField2.getText());
-        dados_cliente.setEndeCli(jTextField3.getText());
-        dados_cliente.setNumeCli(jTextField4.getText());
-        dados_cliente.setComplCli(jTextField5.getText());
-        dados_cliente.setBairCli(jTextField6.getText());
-        dados_cliente.setCidaCli(jTextField7.getText());
-        dados_cliente.setUfCli(jTextField8.getText());
-        dados_cliente.setCepCli(jTextField9.getText());
-        dados_cliente.setFoneCli(jTextField10.getText());
-        dados_cliente.setCpfCli(jTextField11.getText());
-        dados_cliente.setDataNasc(jTextField12.getText());
-        dados_cliente.setCnpjCli(jTextField13.getText());
-      
-      
-      
-        connectDAO objcon = new connectDAO();
-        
-        objcon.insereRegistroJFBD("CLIENTES", dados_cliente.dadosSQLInsert());
-        
-        jTextField1.setText("");
-        jTextField2.setText("");
-        jTextField3.setText("");
-        jTextField4.setText("");
-        jTextField5.setText("");
-        jTextField6.setText("");
-        jTextField7.setText("");
-        jTextField8.setText("");
-        jTextField9.setText("");
-        jTextField10.setText("");
-        jTextField11.setText("");
-        jTextField12.setText("");
-        jTextField13.setText("");
- 
+        String operacao = "Cadastrar";
+        if (operacaoAtivaGlobal.equals(operacao)) {
+
+            clientes dados_cliente = new clientes();
+
+            dados_cliente.setIdCli(Integer.parseInt(jTextField1.getText()));
+            dados_cliente.setNomeCli(jTextField2.getText());
+            dados_cliente.setEndeCli(jTextField3.getText());
+            dados_cliente.setNumeCli(jTextField4.getText());
+            dados_cliente.setComplCli(jTextField5.getText());
+            dados_cliente.setBairCli(jTextField6.getText());
+            dados_cliente.setCidaCli(jTextField7.getText());
+            dados_cliente.setUfCli(jTextField8.getText());
+            dados_cliente.setCepCli(jTextField9.getText());
+            dados_cliente.setFoneCli(jTextField10.getText());
+            dados_cliente.setCpfCli(jTextField11.getText());
+            dados_cliente.setDataNasc(jTextField12.getText());
+            dados_cliente.setCnpjCli(jTextField13.getText());
+
+            connectDAO objcon = new connectDAO();
+
+            objcon.insereRegistroJFBD("CLIENTES", dados_cliente.dadosSQLValues());
+
+            jTextField1.setText("");
+            jTextField2.setText("");
+            jTextField3.setText("");
+            jTextField4.setText("");
+            jTextField5.setText("");
+            jTextField6.setText("");
+            jTextField7.setText("");
+            jTextField8.setText("");
+            jTextField9.setText("");
+            jTextField10.setText("");
+            jTextField11.setText("");
+            jTextField12.setText("");
+            jTextField13.setText("");
+
+        }
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed

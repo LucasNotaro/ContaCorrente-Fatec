@@ -154,7 +154,9 @@ public class Cad_Usuarios extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+        String operacao = "Cadastrar";
+ 
+        if (operacaoAtivaGlobal.equals(operacao)) {
         usuarios dados_usuarios = new usuarios();
         
         dados_usuarios.setId(jTextField1.getText());
@@ -165,7 +167,7 @@ public class Cad_Usuarios extends javax.swing.JFrame {
         
         connectDAO objcon = new connectDAO();
         
-        objcon.insereRegistroJFBD("USUARIOS", dados_usuarios.dadosSQLInsert());
+        objcon.insereRegistroJFBD("USUARIOS", dados_usuarios.dadosSQLValues());
         
         jTextField1.setText("");
         jTextField2.setText("");
@@ -174,7 +176,7 @@ public class Cad_Usuarios extends javax.swing.JFrame {
         
         
         
-        
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

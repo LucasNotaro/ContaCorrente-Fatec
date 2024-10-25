@@ -1,4 +1,3 @@
-
 package DAO;
 
 
@@ -148,7 +147,7 @@ public class clientes {
         
     }
     
-    public String dadosSQLInsert(){
+    public String dadosSQLValues(){
         String dadosClientes;
         dadosClientes = "'"
         + this.getIdCli() + "','"

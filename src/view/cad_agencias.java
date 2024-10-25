@@ -278,7 +278,8 @@ public class Cad_Agencias extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+        String operacao = "Cadastrar";
+        if (operacaoAtivaGlobal.equals(operacao)) {
         agencias dados_agencias = new agencias();
         
         dados_agencias.setNumAge(Integer.parseInt(jTextField1.getText()));
@@ -295,7 +296,7 @@ public class Cad_Agencias extends javax.swing.JFrame {
         
         connectDAO objcon = new connectDAO();
         
-        objcon.insereRegistroJFBD("AGENCIAS", dados_agencias.dadosSQLInsert());
+        objcon.insereRegistroJFBD("AGENCIAS", dados_agencias.dadosSQLValues());
         
         jTextField1.setText("");
         jTextField2.setText("");
@@ -308,6 +309,8 @@ public class Cad_Agencias extends javax.swing.JFrame {
         jTextField9.setText("");
         jTextField10.setText("");
         
+        
+ }
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 

@@ -129,7 +129,7 @@ public class ContaCorrente extends javax.swing.JFrame {
         
         connectDAO objcon = new connectDAO();
         
-        objcon.insereRegistroJFBD("CONTACORRENTE", dados_cc.dadosSQLInsert());
+        objcon.insereRegistroJFBD("CONTACORRENTE", dados_cc.dadosSQLValues());
         
         jTextField1.setText("");
         jTextField2.setText("");

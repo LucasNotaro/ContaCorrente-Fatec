@@ -53,7 +53,7 @@ public class contacorrente {
         
     }
     
-    public String dadosSQLInsert(){
+    public String dadosSQLValues(){
         String dadosCc;
         dadosCc = "'"
         + this.getNumAge() + "','"

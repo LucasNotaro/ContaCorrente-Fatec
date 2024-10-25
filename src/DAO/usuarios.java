@@ -53,7 +53,7 @@ public class usuarios {
         
     }
     
-    public String dadosSQLInsert(){
+    public String dadosSQLValues(){
         String dadosUsuarios;
         dadosUsuarios = "'"
         + this.getId() + "','"

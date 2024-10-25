@@ -96,7 +96,7 @@ public class Historico extends javax.swing.JFrame {
         
         connectDAO objcon = new connectDAO();
         
-        objcon.insereRegistroJFBD("HISTORICOS", dados_hist.dadosSQLInsert());
+        objcon.insereRegistroJFBD("HISTORICOS", dados_hist.dadosSQLValues());
         
         jTextField1.setText("");
         jTextField2.setText("");

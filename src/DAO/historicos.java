@@ -33,7 +33,7 @@ public class historicos {
         
     }
     
-    public String dadosSQLInsert(){
+    public String dadosSQLValues(){
         String historico;
         historico = "'"
         + this.getIdHis() + "','"

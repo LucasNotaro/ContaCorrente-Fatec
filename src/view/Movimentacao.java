@@ -209,7 +209,7 @@ public class Movimentacao extends javax.swing.JFrame {
         
         connectDAO objcon = new connectDAO();
         
-        objcon.insereRegistroJFBD("MOVIMENTACAO", dados_mov.dadosSQLInsert());
+        objcon.insereRegistroJFBD("MOVIMENTACAO", dados_mov.dadosSQLValues());
         
         jTextField1.setText("");
         jTextField2.setText("");
