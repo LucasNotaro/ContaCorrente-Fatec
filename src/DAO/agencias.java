@@ -1,6 +1,4 @@
-
 package DAO;
-
 
 public class agencias {
     private int numAge;        // NUM_AGE
@@ -27,7 +25,6 @@ public class agencias {
         this.foneAge = foneAge;
     }
 
-    // Getters e Setters
     public int getNumAge() {
         return numAge;
     }
@@ -128,6 +125,4 @@ public class agencias {
         
         return dadosAgencia;
     }
-    
-    
 }

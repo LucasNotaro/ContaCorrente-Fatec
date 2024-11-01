@@ -2,21 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/Alunos/Desktop/contaBD/src/view/Cad_Agencias.java</file>
-            <file>file:/C:/Users/Alunos/Desktop/contaBD/src/DAO/connectDAO.java</file>
-            <file>file:/C:/Users/Alunos/Desktop/contaBD/src/DAO/contacorrente.java</file>
-            <file>file:/C:/Users/Alunos/Desktop/contaBD/src/view/Cad_Clientes.java</file>
-            <file>file:/C:/Users/Alunos/Desktop/contaBD/src/DAO/clientes.java</file>
-            <file>file:/C:/Users/Alunos/Desktop/contaBD/src/view/Cad_Usuarios.java</file>
-            <file>file:/C:/Users/Alunos/Desktop/contaBD/src/view/Movimentacao.java</file>
-            <file>file:/C:/Users/Alunos/Desktop/contaBD/src/DAO/usuarios.java</file>
-            <file>file:/C:/Users/Alunos/Desktop/contaBD/src/view/ContaCorrente.java</file>
-            <file>file:/C:/Users/Alunos/Desktop/contaBD/src/view/Historico.java</file>
-            <file>file:/C:/Users/Alunos/Desktop/contaBD/src/DAO/movimentacao.java</file>
-            <file>file:/C:/Users/Alunos/Desktop/contaBD/src/view/menu.java</file>
-            <file>file:/C:/Users/Alunos/Desktop/contaBD/src/DAO/agencias.java</file>
-            <file>file:/C:/Users/Alunos/Desktop/contaBD/src/DAO/historicos.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

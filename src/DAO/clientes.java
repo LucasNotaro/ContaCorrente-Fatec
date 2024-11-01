@@ -1,6 +1,5 @@
 package DAO;
 
-
 import java.util.Date;
 
 public class clientes {
@@ -15,10 +14,9 @@ public class clientes {
     private String cepCli;          // CEP_CLI
     private String foneCli;         // FONE_CLI
     private String cpfCli;          // CPF_CLI
-    private String dataNasc;          // DATA_NASC
+    private String dataNasc;        // DATA_NASC
     private String cnpjCli;         // CNPJ_CLI
 
-    // Construtor
     public clientes(int idCli, String nomeCli, String endeCli, String numeCli, 
                    String complCli, String bairCli, String cidaCli, 
                    String ufCli, String cepCli, String foneCli, 
@@ -38,7 +36,6 @@ public class clientes {
         this.cnpjCli = cnpjCli;
     }
 
-    // Getters e Setters
     public int getIdCli() {
         return idCli;
     }

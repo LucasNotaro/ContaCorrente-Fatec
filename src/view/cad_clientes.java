@@ -149,10 +149,12 @@ public class Cad_Clientes extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jTextField13 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 153, 255));
 
-        jLabel1.setText("Id_Cliente:");
+        jLabel1.setText("ID Cliente:");
 
         jLabel2.setText("Nome:");
 
@@ -160,7 +162,7 @@ public class Cad_Clientes extends javax.swing.JFrame {
 
         jLabel4.setText("Bairro:");
 
-        jLabel5.setText("Numero:");
+        jLabel5.setText("Número:");
 
         jLabel6.setText("Complemento:");
 
@@ -180,7 +182,7 @@ public class Cad_Clientes extends javax.swing.JFrame {
 
         jLabel11.setText("Fone:");
 
-        jLabel12.setText("CPF");
+        jLabel12.setText("CPF:");
 
         jLabel13.setText("CNPJ:");
 
@@ -191,12 +193,14 @@ public class Cad_Clientes extends javax.swing.JFrame {
             }
         });
 
+        jLabel14.setText("CADASTRAR CLIENTE");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -216,27 +220,30 @@ public class Cad_Clientes extends javax.swing.JFrame {
                     .addComponent(jLabel10))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jTextField13)
                         .addComponent(jTextField7)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
+                        .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
                         .addComponent(jTextField6)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
                         .addComponent(jTextField3)
                         .addComponent(jTextField8, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
                         .addComponent(jTextField10)
                         .addComponent(jTextField9)
-                        .addComponent(jTextField2)
+                        .addComponent(jTextField11)
                         .addComponent(jTextField1)
                         .addComponent(jTextField4)
-                        .addComponent(jTextField12)
-                        .addComponent(jTextField11)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jTextField12))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(25, 25, 25)
+                .addComponent(jLabel14)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -288,9 +295,9 @@ public class Cad_Clientes extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(22, 22, 22))
+                .addGap(25, 25, 25))
         );
 
         pack();
@@ -298,9 +305,11 @@ public class Cad_Clientes extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String operacao = "Cadastrar";
-        if (operacaoAtivaGlobal.equals(operacao)) {
 
+        if (operacaoAtivaGlobal.equals(operacao)) {
             clientes dados_cliente = new clientes();
+            
+           
 
             dados_cliente.setIdCli(Integer.parseInt(jTextField1.getText()));
             dados_cliente.setNomeCli(jTextField2.getText());
@@ -333,9 +342,7 @@ public class Cad_Clientes extends javax.swing.JFrame {
             jTextField11.setText("");
             jTextField12.setText("");
             jTextField13.setText("");
-
         }
-
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
@@ -384,6 +391,7 @@ public class Cad_Clientes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

@@ -1,6 +1,4 @@
-
 package DAO;
-
 
 public class contacorrente {
     private String numAge;      // NUM_AGE
@@ -8,7 +6,6 @@ public class contacorrente {
     private String idCli;       // ID_CLI
     private String saldo;     // SALDO
 
-    // Construtor
     public contacorrente(String numAge, String numCc, String idCli, String saldo) {
         this.numAge = numAge;
         this.numCc = numCc;

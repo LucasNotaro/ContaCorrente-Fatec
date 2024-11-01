@@ -1,18 +1,14 @@
-
 package DAO;
-
 
 public class historicos {
     private String idHis;          // ID_HIS
     private String descricao;      // DES_HIS
 
-    // Construtor
     public historicos(String idHis, String descricao) {
         this.idHis = idHis;
         this.descricao = descricao;
     }
 
-    // Getters e Setters
     public String getIdHis() {
         return idHis;
     }

@@ -1,6 +1,4 @@
-
 package DAO;
-
 
 import java.util.Date;
 
@@ -15,7 +13,6 @@ public class movimentacao {
     private String valor;                  // VALOR
     private String saldo;                  // SALDO
 
-    // Construtor
     public movimentacao(String numAge, String numCc, String dataMov, String numDocto, 
                         String debitoCredito, String idHis, String complHis, 
                         String valor, String saldo) {
@@ -30,7 +27,6 @@ public class movimentacao {
         this.saldo = saldo;
     }
 
-    // Getters e Setters
     public String getNumAge() {
         return numAge;
     }

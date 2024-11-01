@@ -20,11 +20,12 @@ public class Cad_Usuarios extends javax.swing.JFrame {
         initComponents();
     }
     String operacaoAtivaGlobal = "Nenhum";   // Variável criada para utilização em toda a classe
-    public Cad_Usuarios(String operacaoAtiva){
+
+    public Cad_Usuarios(String operacaoAtiva) {
         initComponents();                                    // Inicializa todos os componentes que estão colocados na tela Text, Labels, Buttons, etc.
         operacaoAtivaGlobal = operacaoAtiva;  // Setar a operacaoAtivaGlobal com o parâmetro recebido para utilização em toda a classe
         String operacao = "Cadastrar";                    // String para verificar qual é operação que será configurada
-        if (operacaoAtiva.equals(operacao)){
+        if (operacaoAtiva.equals(operacao)) {
             jLabel1.setVisible(true);                      // Para inclusão serão liberados todos os componentes da tela como true para ficarem visíveis
             jLabel2.setVisible(true);
             jLabel3.setVisible(true);
@@ -36,7 +37,7 @@ public class Cad_Usuarios extends javax.swing.JFrame {
             jButton1.setText("Cadastrar");
         }
         operacao = "Alterar";                               // defini a operação como Alterar os dados de um registro
-        if (operacaoAtiva.equals(operacao)){       // para alteração deverá ser setado todos os componentes como false para não visualizar
+        if (operacaoAtiva.equals(operacao)) {       // para alteração deverá ser setado todos os componentes como false para não visualizar
             jLabel1.setVisible(true);                       // deixando somente o label e o TextField do Id para pesquisar como true (visível).
             jLabel2.setVisible(false);
             jLabel3.setVisible(false);
@@ -46,9 +47,9 @@ public class Cad_Usuarios extends javax.swing.JFrame {
             jTextField3.setVisible(false);
             jTextField4.setVisible(false);
             jButton1.setText("Alterar");
-        }        
+        }
         operacao = "Excluir";                                // defini a operação como Excluir um registro
-        if (operacaoAtiva.equals(operacao)){       // para exclusão deverá ser setado todos os componentes como false para não visualizar
+        if (operacaoAtiva.equals(operacao)) {       // para exclusão deverá ser setado todos os componentes como false para não visualizar
             jLabel1.setVisible(true);                       // deixando somente o label e o TextField do Id para pesquisar como true (visível).
             jLabel2.setVisible(false);
             jLabel3.setVisible(false);
@@ -58,9 +59,9 @@ public class Cad_Usuarios extends javax.swing.JFrame {
             jTextField3.setVisible(false);
             jTextField4.setVisible(false);
             jButton1.setText("Excluir");
-        }        
+        }
 
-   }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -80,6 +81,7 @@ public class Cad_Usuarios extends javax.swing.JFrame {
         jTextField4 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jTextField2 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -87,9 +89,9 @@ public class Cad_Usuarios extends javax.swing.JFrame {
 
         jLabel2.setText("Senha:");
 
-        jLabel3.setText("Num Agencia:");
+        jLabel3.setText("Num Agência:");
 
-        jLabel4.setText("Num Cc:");
+        jLabel4.setText("Num CC:");
 
         jButton1.setText("Cadastrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -98,39 +100,36 @@ public class Cad_Usuarios extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setText("CADASTRAR USUÁRIO");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(11, 11, 11)
-                        .addComponent(jTextField1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField4))))
-                .addGap(20, 20, 20))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(95, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(87, 87, 87))
+                    .addComponent(jLabel5)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
+                        .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(25, 25, 25)
+                .addComponent(jLabel5)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -146,9 +145,9 @@ public class Cad_Usuarios extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addGap(25, 25, 25)
                 .addComponent(jButton1)
-                .addGap(38, 38, 38))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -156,27 +155,24 @@ public class Cad_Usuarios extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String operacao = "Cadastrar";
- 
+
         if (operacaoAtivaGlobal.equals(operacao)) {
-        usuarios dados_usuarios = new usuarios();
-        
-        dados_usuarios.setId(jTextField1.getText());
-        dados_usuarios.setSenha(jTextField2.getText());
-        dados_usuarios.setNumAge(jTextField3.getText());
-        dados_usuarios.setNumCc(jTextField4.getText());
-        
-        
-        connectDAO objcon = new connectDAO();
-        
-        objcon.insereRegistroJFBD("USUARIOS", dados_usuarios.dadosSQLValues());
-        
-        jTextField1.setText("");
-        jTextField2.setText("");
-        jTextField3.setText("");
-        jTextField4.setText("");
-        
-        
-        
+            usuarios dados_usuarios = new usuarios();
+
+            dados_usuarios.setId(jTextField1.getText());
+            dados_usuarios.setSenha(jTextField2.getText());
+            dados_usuarios.setNumAge(jTextField3.getText());
+            dados_usuarios.setNumCc(jTextField4.getText());
+
+            connectDAO objcon = new connectDAO();
+
+            objcon.insereRegistroJFBD("USUARIOS", dados_usuarios.dadosSQLValues());
+
+            jTextField1.setText("");
+            jTextField2.setText("");
+            jTextField3.setText("");
+            jTextField4.setText("");
+
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -221,6 +217,7 @@ public class Cad_Usuarios extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;

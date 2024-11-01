@@ -5,10 +5,9 @@ package DAO;
 public class usuarios {
     private String id;        // ID
     private String senha;     // SENHA
-    private String numAge;       // NUM_AGE
-    private String numCc;       // NUM_CC
+    private String numAge;    // NUMero AGENCIA
+    private String numCc;     // NUM CONTA CORRENTE
 
-    // Construtor
     public usuarios(String id, String senha, String numAge, String numCc) {
         this.id = id;
         this.senha = senha;
@@ -16,7 +15,6 @@ public class usuarios {
         this.numCc = numCc;
     }
 
-    // Getters e Setters
     public String getId() {
         return id;
     }
